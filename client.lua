@@ -10,7 +10,7 @@ local function DrawText3D(position, text, r,g,b)
     local fov = (1/GetGameplayCamFov())*100
     local scale = scale*fov
     local ped = GetPlayerPed(i)
-    if onScreen and HasEntityClearLosToEntity(PlayerPedId(), ped, 17) then
+    if onScreen  then
 --         if not useCustomScale then
             SetTextScale(0.0*scale, scale)
 --         else 
