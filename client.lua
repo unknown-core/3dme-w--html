@@ -5,13 +5,13 @@ local playerDistances = {}
 local function DrawText3D(position, text, r,g,b) 
     local onScreen,_x,_y=World3dToScreen2d(position.x,position.y,position.z+1)
     local dist = #(GetGameplayCamCoords()-position)
-
+    local playerPed = PlayerPedId()
     local scale = (1/dist)*2
     local fov = (1/GetGameplayCamFov())*100
     local scale = scale*fov
-
+    local ped = GetPlayerPed(GetPlayerFromServerId(serverId))
     if onScreen  then
-	 print(HasEntityClearLosToEntity(PlayerPedId(), GetPlayerPed()))
+	 print(HasEntityClearLosToEntity(HasEntityClearLosToEntity(playerPed, ped, 17 ))
 --         if not useCustomScale then
             SetTextScale(0.0*scale, scale)
 --         else 
