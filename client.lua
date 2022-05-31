@@ -11,16 +11,16 @@ local function DrawText3D(position, text, r,g,b)
     local scale = scale*fov
    
     if onScreen then
-        if not useCustomScale then
-            SetTextScale(0.0*scale, 0.55*scale)
-        else 
-            SetTextScale(0.0*scale, customScale)
-        end
+--         if not useCustomScale then
+--             SetTextScale(0.0*scale, 0.55*scale)
+--         else 
+--             SetTextScale(0.0*scale, customScale)
+--         end
         SetTextFont(0)
         SetTextProportional(1)
         SetTextColour(r, g, b, 255)
         SetTextDropshadow(0, 0, 0, 0, 255)
---         SetTextEdge(2, 0, 0, 0, 150)
+        SetTextEdge(2, 0, 0, 0, 150)
         SetTextDropShadow()
         SetTextOutline()
         SetTextEntry("STRING")
