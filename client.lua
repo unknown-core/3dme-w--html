@@ -14,7 +14,8 @@ local function DrawText3D(position, text, r,g,b)
     local ped = GetPlayerPed( id )
     if onScreen  then
 --         if not useCustomScale then
-            SetTextScale(0.0*scale, scale)
+--             SetTextScale(0.0*scale, scale)
+	 SetTextScale()
 --         else 
 --             SetTextScale(0.0*scale, customScale)
 --         end
