@@ -41,12 +41,13 @@ Citizen.CreateThread(function()
                 if playerDistances[id] then
                     if playerDistances[id] < disPlayerNames then
                         local targetPedCords = GetEntityCoords(targetPed)
-			local ped = GetPlayerPed( id )
+			local iPed = GetPlayerPed(id)
+			local lPed = PlayerPedId()
                         if NetworkIsPlayerTalking(id) then
                             DrawText3D(targetPedCords, GetPlayerServerId(id), 247,124,24)
                             DrawMarker(27, targetPedCords.x, targetPedCords.y, targetPedCords.z-0.97, 0, 0, 0, 0, 0, 0, 1.001, 1.0001, 0.5001, 173, 216, 230, 100, 0, 0, 0, 0)
                         else
-			    print(HasEntityClearLosToEntity(PlayerPedId(), ped, 17))
+			    print(HasEntityClearLosToEntity((lPed, iPed, 17)))
                             DrawText3D(targetPedCords, GetPlayerServerId(id), 255,255,255)
                         end
                     end
