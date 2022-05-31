@@ -25,7 +25,7 @@ AddEventHandler("3dme:me", function(text, source, icon)
                         htmlString ..
                         '<span style="position: absolute; left: ' ..
                         xxx * 100 ..
-                        "%;top: " .. yyy * 100 .. '%;"><div class="me-container"><div class="icon-container"><span style="color:#cb73e6;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><b>ME: </b>' .. text .. "</div></div></span>"
+                        "%;top: " .. yyy * 100 .. '%;"><div class="me-container"><div class="icon-container"><span style="color:#cb73e6;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><b></b>' .. text .. "</div></div></span>"
                 end
                 if lasthtmlString ~= htmlString then
                             SendNUIMessage({
@@ -74,7 +74,7 @@ AddEventHandler("3dme:do", function(text, source, icon)
                         htmlString ..
                         '<span style="position: absolute; left: ' ..
                         xxx * 100 ..
-                        "%;top: " .. yyy * 100 .. '%;"><div class="do-container"><div class="icon-container"><span style="color: #4d66f1;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><b>DO: </b>' .. text .. "</div></div></span>"
+                        "%;top: " .. yyy * 100 .. '%;"><div class="do-container"><div class="icon-container"><span style="color: #4d66f1;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><b></b>' .. text .. "</div></div></span>"
                 end
                 if lasthtmlString ~= htmlString then
 
