@@ -1,5 +1,5 @@
 liczba = 0
-local disPlayerNames = 5
+local disPlayerNames = 15
 local playerDistances = {}
 
 local function DrawText3D(position, text, r,g,b) 
