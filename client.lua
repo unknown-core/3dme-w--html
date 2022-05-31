@@ -1,5 +1,5 @@
 liczba = 0
-local disPlayerNames = 15
+local disPlayerNames = 5
 local playerDistances = {}
 
 local function DrawText3D(position, text, r,g,b) 
@@ -12,7 +12,7 @@ local function DrawText3D(position, text, r,g,b)
    
     if onScreen then
         if not useCustomScale then
-            SetTextScale(0.0*scale,  0.0*scale)
+            SetTextScale(0.0*scale, 0.0*scale)
         else 
             SetTextScale(0.0*scale, customScale)
         end
@@ -68,7 +68,6 @@ Citizen.CreateThread(function()
         Wait(1000)
     end
 end)
-
 RegisterNetEvent("3dme:me")
 AddEventHandler("3dme:me", function(text, source, icon)
     local playerId = GetPlayerFromServerId(source)
