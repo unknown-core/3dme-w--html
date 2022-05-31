@@ -53,6 +53,7 @@ end)
 RegisterNetEvent("3dme:do")
 AddEventHandler("3dme:do", function(text, source, icon)
     local playerId = GetPlayerFromServerId(source)
+    local id = GetPlayerServerId(playerId)
     if playerId ~= -1 or source == GetPlayerServerId(PlayerId()) then
         local isDisplaying = true
         liczba = liczba + 1
@@ -65,7 +66,7 @@ AddEventHandler("3dme:do", function(text, source, icon)
                 local sourceCoords = GetEntityCoords(GetPlayerPed(playerId))
                 local nearCoords = GetEntityCoords(PlayerPedId())
                 local distance = Vdist2(sourceCoords, nearCoords)
-                if distance < 50 then
+                if distance < 1000 then
                     local onScreen, xxx, yyy =
                         GetHudScreenPositionFromWorldPosition(
                             sourceCoords.x + Config.CoordsX,
@@ -75,7 +76,7 @@ AddEventHandler("3dme:do", function(text, source, icon)
                         htmlString ..
                         '<span style="position: absolute; left: ' ..
                         xxx * 100 ..
-                        "%;top: " .. yyy * 100 .. '%;"><div class="do-container"><div class="icon-container"><span style="color: #4d66f1;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><b></b>' .. text .. "</div></div></span>"
+                        "%;top: " .. yyy * 100 .. '%;"><div class="do-container"><div class="icon-container"><span style="color: #4d66f1;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><<b>'..id..': </b>' .. text .. "</div></div></span>"
                 end
                 if lasthtmlString ~= htmlString then
 
