@@ -3,7 +3,7 @@ liczba = 0
 RegisterNetEvent("3dme:me")
 AddEventHandler("3dme:me", function(text, source, icon)
     local playerId = GetPlayerFromServerId(source)
-    local id = GetPlayerServerId(text)
+    local id = GetPlayerServerId(playerId)
     if playerId ~= -1 or source == GetPlayerServerId(PlayerId()) then
         local isDisplaying = true
         liczba = liczba + 1
