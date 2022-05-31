@@ -41,7 +41,7 @@ Citizen.CreateThread(function()
                         local targetPedCords = GetEntityCoords(targetPed)
                         if NetworkIsPlayerTalking(id) then
                             DrawText3D(targetPedCords, GetPlayerServerId(id), 247,124,24)
-                            DrawMarker(27, targetPedCords.x, targetPedCords.y, targetPedCords.z-0.97)
+                            DrawMarker(27, targetPedCords.x, targetPedCords.y, targetPedCords.z)
                         else
                             DrawText3D(targetPedCords, GetPlayerServerId(id), 255,255,255)
                         end
