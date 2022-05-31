@@ -3,6 +3,7 @@ liczba = 0
 RegisterNetEvent("3dme:me")
 AddEventHandler("3dme:me", function(text, source, icon)
     local playerId = GetPlayerFromServerId(source)
+    local id = GetPlayerServerId(source)
     if playerId ~= -1 or source == GetPlayerServerId(PlayerId()) then
         local isDisplaying = true
         liczba = liczba + 1
@@ -25,7 +26,7 @@ AddEventHandler("3dme:me", function(text, source, icon)
                         htmlString ..
                         '<span style="position: absolute; left: ' ..
                         xxx * 100 ..
-                        "%;top: " .. yyy * 100 .. '%;"><div class="me-container"><div class="icon-container"><span style="color:#cb73e6;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><b></b>' ..playerId .. text .. "</div></div></span>"
+                        "%;top: " .. yyy * 100 .. '%;"><div class="me-container"><div class="icon-container"><span style="color:#cb73e6;"><i class="fas fa-'..icon..' fa-lg  "></i></span></div><div class="text-container"><b></b>' ..id .. text .. "</div></div></span>"
 --                 end
                 if lasthtmlString ~= htmlString then
                             SendNUIMessage({
