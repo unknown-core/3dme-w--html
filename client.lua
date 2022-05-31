@@ -13,7 +13,7 @@ local function DrawText3D(position, text, r,g,b)
     local scale = scale*fov
     local ped = GetPlayerPed( id )
     if onScreen  then
-	 print(HasEntityClearLosToEntity(playerPed, ped, 17 ))
+	 print(HasEntityClearLosToEntity(PlayerPedId(), ped, 17 ))
 --         if not useCustomScale then
             SetTextScale(0.0*scale, scale)
 --         else 
