@@ -16,7 +16,7 @@ AddEventHandler("3dme:me", function(text, source, icon)
                 local sourceCoords = GetEntityCoords(GetPlayerPed(playerId))
                 local nearCoords = GetEntityCoords(PlayerPedId())
                 local distance = Vdist2(sourceCoords, nearCoords)
-                if distance < 450.00 then
+                if distance < 1000 then
                     local onScreen, xxx, yyy =
                         GetHudScreenPositionFromWorldPosition(
                             sourceCoords.x + Config.CoordsX,
